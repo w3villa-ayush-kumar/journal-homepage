@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Journal</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,57 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header-mobile">
+      <div>
+        <div>
+          <span><i class="fa-solid fa-user"></i>Login</span>
+
+          <span><i class="fa-solid fa-user-plus"></i> Register</span>
+        </div>
+        <div>
+          <div>
+            <i class="fa-solid fa-dollar-sign"></i>
+            <a href="#">US Dollar</a>
+            <i class="fa-solid fa-angle-down"></i>
+            <ul class="plain dropdown-content">
+              <li>
+                <a href="#">something</a>
+              </li>
+              <li>
+                <a href="#">something</a>
+              </li>
+              <li>
+                <a href="#">something</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            🇬🇧
+            <a href="#">English</a>
+            <i class="fa-solid fa-angle-down"></i>
+            <ul class="plain dropdown-content">
+              <li>
+                <a href="#">something</a>
+              </li>
+              <li>
+                <a href="#">something</a>
+              </li>
+              <li>
+                <a href="#">something</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span>JOURNAL</span>
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </header>
+    <header class="header-desktop">
       <nav class="nav-bar">
         <ul>
           <li>
@@ -263,7 +313,7 @@
           <div><span>FASHION</span></div>
           <div><span>BAGS</span></div>
           <div><span>HEALTH & BEAUTY</span></div>
-          <div><span>FOOTWEAR</span></div>
+          <div id="hide"><span>FOOTWEAR</span></div>
           <div><span>HOME DECOR</span></div>
         </div>
         <div class="dots">
@@ -315,7 +365,7 @@
               <span><i class="fa-solid fa-question"></i>Question</span>
             </div>
           </div>
-          <div>
+          <div id="hide">
             <div class="loaded-div">
               <div class="label tag1">2-3 DAYS</div>
               <div class="label tag2">TOP BRAND</div>
