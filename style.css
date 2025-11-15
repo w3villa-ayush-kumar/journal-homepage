@@ -1177,7 +1177,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .brand-card {
-    width: 11%;
+    flex: 0 1 150px;
     height: 150px;
     background-color: #fff;
     border: 1px solid #e2e2e2;
@@ -1190,12 +1190,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 .brand-card img {
     width: 70%;
-    height: 14vh;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.8;
     border-radius: 0.5rem;
-    background-size: cover;
-    background-position: center;
 }
 
 .dots.brand-dots {
@@ -1242,8 +1242,8 @@ input[type=number]::-webkit-outer-spin-button {
     content: "";
     position: absolute;
     bottom: -0.8rem;
-    left: 37rem;
-    width: 4%;
+    left: 45%;
+    width: 8%;
     border-bottom: 3px solid #ea6634;
 }
 
@@ -1458,7 +1458,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .whyUs.aboutUs {
     margin: 2rem 0;
-    height: 60vh;
+    height: 80vh;
     justify-content: space-between;
 }
 
@@ -1557,6 +1557,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 24%;
     height: 15vh;
     justify-content: space-between;
+    flex-direction: row;
 }
 
 .whyUs.mostViewed>div img {
@@ -1574,6 +1575,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 65%;
     height: 15vh;
     padding: 0.6rem 0.5rem;
+    align-items: flex-start;
 }
 
 .whyUs.mostViewed>div div>div p:first-of-type {
@@ -1742,6 +1744,7 @@ footer {
 }
 
 .email-box button {
+    display: flex;
     background-color: #300091;
     color: #fff;
     padding: 0.6rem 1rem;
@@ -1749,6 +1752,8 @@ footer {
     font-size: 0.9rem;
     border-radius: 0.2rem;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -1833,6 +1838,26 @@ footer {
 
     .photos-featurePdt {
         width: 100%;
+    }
+
+    .whyUs.mostViewed>div div:nth-of-type(3) {
+        display: none;
+    }
+
+    .whyUs.mostViewed>div div {
+        width: 30%;
+    }
+
+    .whyUs.mostViewed>div {
+        justify-content: space-around;
+    }
+
+    .category-products div:nth-of-type(4) {
+        display: none;
+    }
+
+    .cat-card {
+        width: 30%;
     }
 
 }
@@ -1971,6 +1996,7 @@ footer {
 
     .photos-whyUs span {
         font-size: 0.8rem;
+        height: auto
     }
 
     .dots {
@@ -2003,6 +2029,36 @@ footer {
         left: 21rem;
     }
 
+    .brand-container div:nth-of-type(7) {
+        display: none;
+    }
+
+    .whyUs.mostViewed>div div>div p:first-of-type,
+    .whyUs.mostViewed>div .headphones p:first-of-type {
+        font-size: 1rem;
+    }
+
+    .whyUs.mostViewed>div div>div p:last-of-type,
+    .whyUs.mostViewed>div .headphones div:first-of-type p,
+    .whyUs.mostViewed>div div>div>div i {
+        font-size: 0.9rem !important;
+    }
+
+    .footer-links h3 {
+        font-size: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+
+    .footer-links .newsletter p {
+        font-size: 1rem;
+    }
+
+    .whyUs.aboutUs>div:first-of-type>div:first-of-type {
+        display: none;
+    }
 
 }
 
@@ -2015,9 +2071,21 @@ footer {
         display: none;
     }
 
+    .category-products>div:nth-of-type(3) {
+        display: none;
+    }
 
+    .cat-card {
+        width: 45%;
+    }
 
+    .right-category {
+        width: 60%;
+    }
 
+    .left-category {
+        width: 30%;
+    }
 }
 
 @media (max-width: 880px) {
@@ -2322,6 +2390,10 @@ footer {
         height: 20vh;
     }
 
+    .whyUs.aboutUs>div:first-of-type>div:first-of-type {
+        display: block;
+    }
+
     .whyUs.gallerySection>span:first-child::after {
         left: 0;
         width: 10rem;
@@ -2417,13 +2489,70 @@ footer {
     .whyUs.mostViewed>div {
         justify-content: space-around;
         flex-direction: column;
-
+        gap: 1rem;
+        margin: 3% 0;
     }
 
 
     .whyUs.mostViewed>div div {
-        width: 50%;
+        width: 23rem;
     }
+
+    .whyUs.mostViewed>div img {
+        width: 10rem;
+    }
+
+    .whyUs.mostViewed>div div>div p:first-of-type {
+        white-space: nowrap;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        width: 95%;
+    }
+
+    .footer-links section {
+        width: 100%;
+        border-right: none;
+        padding: 0;
+    }
+
+    .footer-links h3::after {
+        display: none;
+    }
+
+    .footer-links h3 {
+        font-size: 2rem;
+    }
+
+    .footer-links a {
+        font-size: 1.5rem;
+        color: #1C60D6;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .up {
+        top: 0;
+        left: 25rem;
+    }
+
+    .whyUs li:nth-of-type(2),
+    .whyUs li:nth-of-type(3) {
+        display: none;
+    }
+
+    .whyUs>span:last-of-type,
+    .whyUs.featureCategory>span:last-of-type,
+    .whyUs.blogSection p {
+        font-size: 1rem;
+    }
+
 }
 
 
@@ -2442,12 +2571,12 @@ footer {
     }
 
     .header-mobile>div:last-of-type span {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
         margin-right: 20%;
     }
 
     .header-mobile>div:last-of-type i {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
 
@@ -2473,4 +2602,26 @@ footer {
         height: 70vh;
     }
 
+    .logos i {
+        font-size: 2rem;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .up {
+        top: 0;
+        left: 20rem;
+    }
+
+    .payment-icons {
+        font-size: 2.4rem;
+    }
+
+    .whyUs.featurePdt>div:last-child {
+        bottom: 1.2rem;
+
+    }
 }
